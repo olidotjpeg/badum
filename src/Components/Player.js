@@ -9,7 +9,6 @@ class Player extends Component {
     playSound() {
         const audio = document.getElementById('audio');
         audio.play();
-        console.log('Playing a sound');
     }
 
     render() {
@@ -18,8 +17,7 @@ class Player extends Component {
                 <h1><b>Bad joke?</b>  Go ahead, tap it!</h1>
                     <div className="animation-holder">
                         <div className="speaker">
-                            <button onClick={() => this.playSound()}>Hello</button>
-                            <div className="playbutton"></div>
+                            <button className="play_button" onClick={() => this.playSound()}></button>
                             <div className="wave"></div>
                             <div className="wave delay"></div>
                             <div className="wave delay2"></div>
