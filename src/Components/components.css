@@ -1,0 +1,8 @@
+.badum {}
+
+.animation-holder {
+	width: 300px;
+	height: 300px;
+	background-size: cover;
+	background-image: url('../speaker.png');
+}
