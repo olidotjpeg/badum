@@ -21,3 +21,17 @@
 	margin-left: 15px;
 	margin-top: -5px;
 }
+
+.wave {
+	background: pink;
+	height: 50px;
+}
+
+.animate {
+	animation: wave 1s infinite;
+}
+
+@keyframes wave {
+	0%   { opacity: 0; }
+	100% { opacity: 1; }
+}
