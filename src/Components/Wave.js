@@ -22,17 +22,15 @@ class Wave extends Component {
 
     render() {
 
-		if (this.props.animateState) {
-            this.setState({
-                animateClass: 'animate'
-            });
+        if (this.props.animateState) {
+            console.log(this.props);
 
-	        setTimeout(() => {
-	        	this.setState({
-	        		animateClass: ''
-	        	})
-	        }, this.props.delay);
-	    }
+            setTimeout(() => { 
+                this.setState({
+                    animateClass: this.props.animateState ? 'animate' : ''
+                })
+            }, this.props.delay);
+        }
 
         return (
             <div className={classNames(this.state.animateClass, 'wave')}></div>
