@@ -1,14 +1,32 @@
 import React, { Component } from 'react';
+import Wave from './Wave';
 import './components.css';
-//import speaker from '../speaker.png';
 import badummMp3 from '../ba_dumm.mp3';
 import badummOgg from '../ba_dumm.ogg';
 
 class Player extends Component {
 
+    constructor() {
+        super();
+
+        this.state = {
+            animateWave: false
+        }
+    }
+
     playSound() {
         const audio = document.getElementById('audio');
         audio.play();
+
+        this.setState({
+            animateWave: true
+        });
+
+        setTimeout(() => { 
+            this.setState({
+                animateWave: false
+            });
+        }, 2000);
     }
 
     render() {
@@ -18,9 +36,9 @@ class Player extends Component {
                     <div className="animation-holder">
                         <div className="speaker">
                             <button className="play_button" onClick={() => this.playSound()}></button>
-                            <div className="wave"></div>
-                            <div className="wave delay"></div>
-                            <div className="wave delay2"></div>
+                            <Wave animateState={this.state.animateWave} delay={300} />
+                            <Wave animateState={this.state.animateWave} delay={700} />
+                            <Wave animateState={this.state.animateWave} delay={1000} />
                         </div>
                     </div>
                     <audio id="audio">
