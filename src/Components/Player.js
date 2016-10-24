@@ -36,9 +36,9 @@ class Player extends Component {
                     <div className="animation-holder">
                         <div className="speaker">
                             <button className="play_button" onClick={() => this.playSound()}></button>
-                            <Wave animateState={this.state.animateWave} delay={400} />
-                            <Wave animateState={this.state.animateWave} delay={950} />
-                            <Wave animateState={this.state.animateWave} delay={1200} />
+                            <Wave animateState={this.state.animateWave} delay={200} />
+                            <Wave animateState={this.state.animateWave} delay={300} />
+                            <Wave animateState={this.state.animateWave} delay={700} />
                         </div>
                     </div>
                     <audio id="audio">

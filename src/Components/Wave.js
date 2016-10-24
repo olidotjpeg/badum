@@ -23,8 +23,6 @@ class Wave extends Component {
     render() {
 
         if (this.props.animateState) {
-            console.log(this.props);
-
             setTimeout(() => { 
                 this.setState({
                     animateClass: this.props.animateState ? 'animate' : ''

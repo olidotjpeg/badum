@@ -37,13 +37,13 @@
 
 .wave {
 	position: absolute;
-	top: 0;
-	left: 0;
-	border: solid pink 1px;
+	top: 35px;
+	left: 45px;
+	border: solid #fff 1px;
 	transform: scale(0);
 	border-radius: 50%;
-	height: 150px;
-	width: 150px;
+	height: 70%;
+	width: 70%;
 	opacity: 0;
 }
 
@@ -60,7 +60,7 @@
 		opacity: 1;
 	}
 	100% { 
-		 opacity: 0;
+		opacity: 0;
 		transform: scale(1);
 	}
 }
