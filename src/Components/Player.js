@@ -18,7 +18,7 @@ class Player extends Component {
                 <h1><b>Bad joke?</b>  Go ahead, tap it!</h1>
                     <div className="animation-holder">
                         <div className="speaker">
-                            <button onClick={() => this.playSound()}>Hello</button>
+                            <button onClick={() => this.playSound()}></button>
                             <div className="playbutton"></div>
                             <div className="wave"></div>
                             <div className="wave delay"></div>

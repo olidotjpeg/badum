@@ -1,4 +1,14 @@
-.badum {}
+.badum {
+	display: flex;
+	color: #fff;
+	flex-flow: wrap column;
+	justify-content: center;
+	align-items: center;
+}
+
+.badum h1 {
+	text-align: center;
+}
 
 .animation-holder {
 	width: 300px;
