@@ -1,3 +1,43 @@
 body {
     background: #0D1527;
 }
+
+.menu-toggle {
+	position: fixed;
+	top: 10px;
+	right: 10px;
+	border: solid 1px #fff;
+	width: 35px;
+	height: 35px;
+	border-radius: 50%;
+	background: transparent;
+	outline: none;
+	cursor: pointer;
+	transition: all .3s ease-in-out;
+}
+
+.menu-toggle.open {
+    right: 85%;
+}
+
+.menu-toggle:before {
+	content: "";
+	position: absolute;
+	background: #fff;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border-radius: 50%;
+	display: block;
+	width: 10px;
+	height: 10px;
+}
+
+.menu-toggle:active {
+	background: #fff;
+}
+
+.menu-toggle:active:before {
+	background: #0D1527;
+	border: solid 1px #fff;
+}

@@ -32,7 +32,7 @@ class Player extends Component {
     render() {
         return (
             <div className="badum">
-                <h1><b>Bad joke?</b>  Go ahead, tap it!</h1>
+                <h1>Bad joke? Go ahead, tap it!</h1>
                     <div className="animation-holder">
                         <div className="speaker">
                             <button className="play_button" onClick={() => this.playSound()}></button>
@@ -46,6 +46,7 @@ class Player extends Component {
                       <source src={badummMp3} type="audio/mpeg" />
                         Your browser does not support the audio element.
                     </audio>
+                    
             </div>
         );
     }
