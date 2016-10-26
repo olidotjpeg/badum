@@ -1,10 +1,23 @@
-import React, { Component } from 'react';
+import React, { 
+    Component,
+    PropTypes
+ } from 'react';
 import Wave from './Wave';
 import './components.css';
 import badummMp3 from '../ba_dumm.mp3';
 import badummOgg from '../ba_dumm.ogg';
 
 class Player extends Component {
+
+    static propTypes = {
+        playState: PropTypes.bool
+    };
+
+    componentDidMount() {
+        if (this.props.playState) {
+            this.playSound();
+        }
+    }
 
     constructor() {
         super();
@@ -30,6 +43,7 @@ class Player extends Component {
     }
 
     render() {
+
         return (
             <div className="badum">
                 <h1>Bad joke? Go ahead, tap it!</h1>

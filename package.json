@@ -1,7 +1,7 @@
 {
   "name": "badum",
   "version": "0.0.1",
-  "homepage": "http://stenkilde.github.io/badum",
+  "homepage": "http://badumtis.ch",
   "private": true,
   "devDependencies": {
     "autoprefixer": "6.4.1",
@@ -50,6 +50,7 @@
   },
   "dependencies": {
     "classnames": "^2.2.5",
+    "history": "^4.3.0",
     "react": "^15.3.2",
     "react-dom": "^15.3.2"
   },

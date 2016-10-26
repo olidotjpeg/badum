@@ -1,7 +1,15 @@
+// React
 import React, { Component } from 'react';
+
+// Third Party
+import createHistory from 'history/createBrowserHistory'
+import classNames from 'classnames';
+
+// Components
 import Player from './Components/Player';
 import SideBar from './Components/Sidebar';
-import classNames from 'classnames';
+
+// CSS
 import './App.css';
 
 class App extends Component {
@@ -9,9 +17,22 @@ class App extends Component {
 	constructor() {
 		super();
 
+		// Base state
 		this.state = {
-			menuState: false
+			menuState: false,
+			autoPlay: false
 		}
+
+		// Location handling
+		const history = createHistory();
+    	const location = history.location
+
+    	if (location.search === '?play') {
+    		this.state = {
+    			autoPlay: true
+    		};
+    	}
+
 	}
 
 	menuHandler() {
@@ -32,7 +53,7 @@ class App extends Component {
 
         return (
             <div className="App">
-                <Player />
+                <Player playState={this.state.autoPlay} />
                 <SideBar menuState={this.state.menuState} />
                 <button className={classNames(menuStateClass, 'menu-toggle')} onClick={() => this.menuHandler()}></button>
             </div>
